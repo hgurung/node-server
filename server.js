@@ -46,6 +46,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs',{
+        pageTitle: 'Portfolio Page',
+        welcomeMessage: 'Welcome to my portfolio'
+    });
+});
+
 app.get('/bad' ,(req , res) => {
     res.send({
         error: 'Unable to find any thing'
